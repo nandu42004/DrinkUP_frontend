@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Order Status</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div data-include="navbar.html"></div>
+
+  <main class="main-content">
+    <h2>Your Order Summary</h2>
+    <ul class="order-summary">
+      <li>🍓 Drink: Berry Blast</li>
+      <li>🧊 Sugar: Less Sugar</li>
+      <li>🌰 Extras: Almond, Honey</li>
+      <li>🥤 Quantity: 250ml</li>
+    </ul>
+
+    <div class="status-box">
+      <h3>Status: <span id="status">Preparing</span></h3>
+      <p>Estimated Time: <span id="timer">4 minutes</span></p>
+    </div>
+
+    <button class="btn" onclick="location.href='review.html'">Leave a Review ✍️</button>
+  </main>
+
+  <div data-include="footer.html"></div>
+
+  <script src="js/status.js"></script>
+  <script src="js/include.js"></script>
+</body>
+</html>

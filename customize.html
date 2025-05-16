@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Customize Your Drink</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div data-include="navbar.html"></div>
+
+  <main class="main-content">
+    <h2>Create Your Healthy Drink</h2>
+
+    <div class="menu-grid">
+      <article class="drink-card">
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1542843137-8791a6904d14?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Green Smoothie">
+        </div>
+        <div class="card-content">
+          <h3>Green Smoothie</h3>
+          <p>Packed with spinach, kale, and pineapple. Rich in antioxidants and vitamins A, C, & K. Supports detoxification and improves digestion.</p>
+        </div>
+      </article>
+
+      <article class="drink-card">
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1505252585461-04db2280bc0a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Berry Blast">
+        </div>
+        <div class="card-content">
+          <h3>Berry Blast</h3>
+          <p>Mixed berries with Greek yogurt. High in antioxidants and probiotics. Boosts immunity and promotes healthy skin.</p>
+        </div>
+      </article>
+
+      <article class="drink-card">
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1599043513900-ed6fe01d3833?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Protein Shake">
+        </div>
+        <div class="card-content">
+          <h3>Protein Shake</h3>
+          <p>Whey protein with almond milk and banana. Builds muscle mass, enhances recovery, and keeps you full longer.</p>
+        </div>
+      </article>
+
+      <article class="drink-card">
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1587080413959-06b859fb3b094?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Almond Detox">
+        </div>
+        <div class="card-content">
+          <h3>Almond Detox</h3>
+          <p>Almond milk with chia seeds and dates. Rich in fiber and healthy fats. Supports heart health and cleanses the body.</p>
+        </div>
+      </article>
+    </div>
+
+    <section class="customize-form">
+      <h3>Customize Your Drink</h3>
+      <form id="customForm">
+        <div class="form-group">
+          <label>Sugar Level:</label>
+          <select>
+            <option>No Sugar</option>
+            <option>Less Sugar</option>
+            <option>Normal</option>
+            <option>Extra Sweet</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Add Ingredients:</label>
+          <div class="checkbox-group">
+            <label><input type="checkbox" id="almond"> Almond</label>
+            <label><input type="checkbox" id="chia"> Chia Seeds</label>
+            <label><input type="checkbox" id="honey"> Honey</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Quantity (ml):</label>
+          <input type="number" placeholder="Enter quantity in ml">
+        </div>
+
+        <div class="form-group">
+          <label>Special Instructions:</label>
+          <textarea rows="3" placeholder="Tell us how you'd like it prepared..."></textarea>
+        </div>
+
+        <button class="btn" type="button" onclick="goToStatus()">Create My Drink 🍹</button>
+      </form>
+    </section>
+  </main>
+
+  <div data-include="footer.html"></div>
+
+  <script src="js/customize.js"></script>
+  <script src="js/include.js"></script>
+</body>
+</html>

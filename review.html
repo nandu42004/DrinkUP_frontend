@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Leave a Review</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div data-include="navbar.html"></div>
+
+  <main class="main-content">
+    <h2>We'd Love Your Feedback!</h2>
+
+    <form class="review-form">
+      <label>Name:
+        <input type="text" placeholder="Your name..." />
+      </label>
+      <label>Rating:
+        <select>
+          <option>⭐️</option>
+          <option>⭐️⭐️</option>
+          <option>⭐️⭐️⭐️</option>
+          <option>⭐️⭐️⭐️⭐️</option>
+          <option>⭐️⭐️⭐️⭐️⭐️</option>
+        </select>
+      </label>
+      <label>Your Feedback:
+        <textarea placeholder="Tell us what you loved or what we can improve..."></textarea>
+      </label>
+      <button class="btn" type="submit">Submit Review</button>
+    </form>
+
+    <button class="btn" onclick="goBackToOrder()">⬅️ Back to Order Page</button>
+  </main>
+
+  <div data-include="footer.html"></div>
+
+  <script>
+    function goBackToOrder() {
+      window.location.href = 'status.html';
+    }
+  </script>
+  <script src="js/include.js"></script>
+</body>
+</html>
