@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Order - DrinkUp</title>
+  <link rel="stylesheet" href="order.css" />
+</head>
+<body>
+
+    <header>
+    <div class="navbar-logo">
+    <img src="/images/logo.png" alt="DrinkUp Logo" /><span class="navbar-title">DrinkUp</span>
+    </div>
+    <nav>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="menu.html">Menu</a>
+    </nav>
+  </header>
+  <main class="order-container">
+  <!-- Hero Banner -->
+  <section class="hero-banner">
+    <div class="hero-content">
+      <h1>Fresh Drinks On The Way!</h1>
+      <p>Your refreshing order is being prepared with care</p>
+    </div>
+    <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87" alt="Fresh drinks" class="hero-image" />
+  </section>
+
+  <!-- Main Content Grid -->
+  <div class="order-grid">
+    <!-- Ordered Items Section -->
+    <section class="order-list">
+      <div class="section-header">
+        <h2>Your Order Summary</h2>
+        <div class="decorative-line"></div>
+      </div>
+      <div class="order-items">
+        <div class="order-card premium-card">
+          <img src="images/mojito.jpg" alt="Mojito" />
+          <div class="card-details">
+            <h3>Mojito <span class="quantity">x1</span></h3>
+            <p>Refreshing mint & lime drink</p>
+            <div class="price-addons">
+              <strong>₹120</strong>
+              <span class="custom-badge">Best Seller</span>
+            </div>
+          </div>
+        </div>
+        <div class="order-card premium-card">
+          <img src="images/sunset.jpg" alt="Sunset Bliss" />
+          <div class="card-details">
+            <h3>Sunset Bliss <span class="quantity">x1</span></h3>
+            <p>Orange & grenadine mocktail</p>
+            <div class="price-addons">
+              <strong>₹150</strong>
+              <span class="custom-badge">Seasonal Special</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Custom Drink & Timer -->
+    <div class="sidebar-section">
+      <!-- Custom Drink Section -->
+      <section class="custom-drink">
+        <div class="section-header">
+          <h2>Your Custom Creation</h2>
+          <div class="decorative-line"></div>
+        </div>
+        <div class="custom-box">
+          <div class="custom-detail">
+            <span>🍹 Tropical Mix</span>
+            <div class="ingredient-chips">
+              <span class="chip">Pineapple</span>
+              <span class="chip">Coconut Milk</span>
+              <span class="chip">Mint</span>
+            </div>
+          </div>
+          <div class="specifications">
+            <div class="spec-item">
+              <span class="spec-label">Sugar Level:</span>
+              <div class="spec-value">
+                <div class="sugar-level medium"></div>
+                <span>Medium</span>
+              </div>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Size:</span>
+              <span class="spec-value">250ml</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Special Requests:</span>
+              <span class="spec-value">Serve chilled, no ice</span>
+            </div>
+          </div>
+          <div class="custom-price">
+            <span>Total:</span>
+            <strong>₹180</strong>
+          </div>
+        </div>
+      </section>
+
+      <!-- Order Timer -->
+      <section class="timer-section">
+        <div class="section-header">
+          <h2>Estimated Arrival</h2>
+          <div class="decorative-line"></div>
+        </div>
+        <div class="timer-circle">
+          <div class="timer-content">
+            <div id="minutes">10</div>
+            <div id="seconds">00</div>
+            <span>minutes</span>
+          </div>
+          <svg class="progress-ring">
+            <circle class="progress-ring__circle" stroke-width="4" fill="transparent" r="58" cx="60" cy="60"/>
+          </svg>
+        </div>
+        <p class="timer-note">Preparing your order with ❤️</p>
+      </section>
+    </div>
+  </div>
+</main>  
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <h3>DrinkUp</h3>
+      <p>Your Healthy Drink Spot</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-social">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="#"><img src="https://img.icons8.com/ios-filled/20/ffffff/facebook.png" alt="Facebook" /></a>
+        <a href="#"><img src="https://img.icons8.com/ios-filled/20/ffffff/instagram-new.png" alt="Instagram" /></a>
+        <a href="#"><img src="https://img.icons8.com/ios-filled/20/ffffff/twitter.png" alt="Twitter" /></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 DrinkUp. All rights reserved.</p>
+  </div>
+</footer>
+
+  <script>
+    let minutes = 10;
+let seconds = 0;
+
+const minuteDisplay = document.getElementById('minutes');
+const secondDisplay = document.getElementById('seconds');
+
+const countdown = setInterval(() => {
+  if (seconds === 0) {
+    if (minutes === 0) {
+      clearInterval(countdown);
+      document.querySelector(".timer").innerText = "Arrived!";
+      return;
+    }
+    minutes--;
+    seconds = 59;
+  } else {
+    seconds--;
+  }
+
+  minuteDisplay.textContent = minutes.toString().padStart(2, '0');
+  secondDisplay.textContent = seconds.toString().padStart(2, '0');
+}, 1000);
+
+  </script>
+</body>
+</html>
